@@ -86,6 +86,17 @@ UI-only states (derived, not from firmware):
 - GitHub Releases host the compiled `.bin`
 - HTTP redirect to download URL, device applies update in-place
 
+## OTA Library
+
+FastHTTPOTA is used for the OTA download step. Reference it in `platformio.ini` via GitHub (never the PlatformIO registry):
+
+```ini
+lib_deps =
+  https://github.com/LeeorNahum/FastHTTPOTA.git#main
+```
+
+**PlatformIO Library Rule**: Always reference libraries via GitHub URL (`https://github.com/...`), never via the PlatformIO registry (`username/LibraryName`). GitHub provides version pinning, reproducibility, and direct source access.
+
 ## Build Commands
 
 ```bash
